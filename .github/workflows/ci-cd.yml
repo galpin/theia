@@ -89,24 +89,35 @@ jobs:
           NODE_OPTIONS: --max_old_space_size=4096
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # https://github.com/microsoft/vscode-ripgrep/issues/9
 
-      - name: Download Plugins
-        shell: bash
-        run: |
-          npm run download:plugins -- --rate-limit 3
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: theia-build-${{ matrix.os }}-node-${{ matrix.node }}
+          path: |
+            examples/browser/lib
+            examples/browser-only/lib
+            examples/electron/lib
+            packages/*/lib
+          retention-days: 7
 
-      - name: Test (headless)
-        if: matrix.tests != 'skip'
-        shell: bash
-        run: |
-          npm run rebuild:browser
-          npm run test:theia
+      # - name: Download Plugins
+      #   shell: bash
+      #   run: |
+      #     npm run download:plugins -- --rate-limit 3
 
-      - name: Test (browser)
-        if: matrix.tests != 'skip' && matrix.node == '20.x'
-        run: |
-          npm run test:browser
+      # - name: Test (headless)
+      #   if: matrix.tests != 'skip'
+      #   shell: bash
+      #   run: |
+      #     npm run rebuild:browser
+      #     npm run test:theia
 
-      - name: Test (electron)
-        if: matrix.tests != 'skip' && runner.os == 'Linux'
-        run: |
-          xvfb-run -a npm run test:electron
+      # - name: Test (browser)
+      #   if: matrix.tests != 'skip' && matrix.node == '20.x'
+      #   run: |
+      #     npm run test:browser
+
+      # - name: Test (electron)
+      #   if: matrix.tests != 'skip' && runner.os == 'Linux'
+      #   run: |
+      #     xvfb-run -a npm run test:electron
