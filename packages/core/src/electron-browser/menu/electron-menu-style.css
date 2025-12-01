@@ -20,13 +20,19 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% - 4px);
-  margin: 4px;
+  height: 100%;
+  user-select: none;
   -webkit-app-region: drag !important;
+  z-index: 0;
 }
 
 #theia-top-panel > * {
   -webkit-app-region: no-drag;
+}
+
+#theia-top-panel .lm-MenuBar {
+  z-index: 1;
+  position: relative;
 }
 
 #theia-custom-title {
@@ -43,7 +49,9 @@
   margin-left: auto;
   margin-right: auto;
   zoom: 1;
+  user-select: none;
   -webkit-app-region: drag !important;
+  z-index: 1;
 }
 
 #theia-custom-title.relative {
@@ -61,6 +69,7 @@
   top: 0;
   right: 0;
   height: 100%;
+  z-index: 2;
 }
 
 #window-controls .control-button {
