@@ -26,4 +26,9 @@ Select themes from: **Settings → Appearance → Color Theme**
 
 ## License
 
-EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
+MIT License
+
+The Catppuccin color themes are Copyright (c) 2021 Catppuccin and licensed under the MIT License.
+See [LICENSE-CATPPUCCIN](./LICENSE-CATPPUCCIN) for full license text.
+
+Theia integration code is also MIT licensed.

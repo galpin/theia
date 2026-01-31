@@ -20,7 +20,7 @@
     "theme",
     "catppuccin"
   ],
-  "license": "EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/eclipse-theia/theia.git"
@@ -32,7 +32,8 @@
   "files": [
     "lib",
     "src",
-    "data"
+    "data",
+    "LICENSE-CATPPUCCIN"
   ],
   "scripts": {
     "build": "theiaext build",
