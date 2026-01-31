@@ -4,7 +4,11 @@ Minimal Theia extension that adds [Catppuccin](https://github.com/catppuccin) co
 
 ## Themes Included
 
+All four official Catppuccin variants:
+
 - **Catppuccin Mocha** - Warm, cozy dark theme (most popular variant)
+- **Catppuccin Macchiato** - Balanced dark theme with softer contrast
+- **Catppuccin Frappé** - Cool-toned dark theme
 - **Catppuccin Latte** - Clean, elegant light theme
 
 ## Features

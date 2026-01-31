@@ -39,6 +39,36 @@ export class CatppuccinThemesContribution implements FrontendApplicationContribu
             editorTheme: 'catppuccin-mocha'
         });
 
+        // Register Catppuccin Macchiato (dark)
+        this.monacoThemeRegistry.register(
+            require('../../data/themes/macchiato.json'),
+            undefined,
+            'catppuccin-macchiato',
+            'vs-dark'
+        );
+
+        this.themeService.register({
+            id: 'catppuccin-macchiato',
+            type: 'dark',
+            label: 'Catppuccin Macchiato',
+            editorTheme: 'catppuccin-macchiato'
+        });
+
+        // Register Catppuccin Frappé (dark)
+        this.monacoThemeRegistry.register(
+            require('../../data/themes/frappe.json'),
+            undefined,
+            'catppuccin-frappe',
+            'vs-dark'
+        );
+
+        this.themeService.register({
+            id: 'catppuccin-frappe',
+            type: 'dark',
+            label: 'Catppuccin Frappé',
+            editorTheme: 'catppuccin-frappe'
+        });
+
         // Register Catppuccin Latte (light)
         this.monacoThemeRegistry.register(
             require('../../data/themes/latte.json'),
